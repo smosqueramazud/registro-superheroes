@@ -4,11 +4,15 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
+    <button mat-menu-item routerLink="/inicio">
+      <mat-icon>home</mat-icon>
+      <span>Inicio</span>
+    </button>
+    <button mat-menu-item routerLink="/agregar">
       <mat-icon>add</mat-icon>
       <span>Agregar Superhéroe</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item routerLink="/modificar">
       <mat-icon>create</mat-icon>
       <span>Modificar Superhéroe</span>
     </button>
@@ -16,8 +20,9 @@
   <span>Universo Marvel</span>
   <span class="example-spacer"></span>
   <div>
-    <a mat-button> Agregar Superhéroe</a>
-    <a mat-button> Modificar Superhéroe</a>
+    <a mat-button routerLink="/inicio" > Inicio</a>
+    <a mat-button routerLink="/agregar"> Agregar Superhéroe</a>
+    <a mat-button routerLink="/modificar"> Modificar Superhéroe</a>
     <a mat-button> Contacts </a>
   </div>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -27,3 +32,5 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
+
+<router-outlet></router-outlet>  

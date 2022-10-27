@@ -34,10 +34,16 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { AgregarComponent } from './components/agregar/agregar.component';
+import { ModificarComponent } from './components/modificar/modificar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InicioComponent,
+    AgregarComponent,
+    ModificarComponent
   ],
   imports: [
     BrowserModule,

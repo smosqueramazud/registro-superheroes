@@ -37,6 +37,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AgregarComponent } from './components/agregar/agregar.component';
 import { ModificarComponent } from './components/modificar/modificar.component';
+import { ConexionApiService } from './services/conexion-api.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -81,8 +84,12 @@ import { ModificarComponent } from './components/modificar/modificar.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule, 
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ConexionApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

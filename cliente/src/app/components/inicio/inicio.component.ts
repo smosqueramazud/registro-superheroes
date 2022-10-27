@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexionApiService } from 'src/app/services/conexion-api.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private conexionApi: ConexionApiService) { }
 
   ngOnInit(): void {
+    this.obtenerListaSuperheroes();
+  }
+
+
+  obtenerListaSuperheroes(){
+    this.conexionApi.getSuperheroes().subscribe(
+      res => {
+        console.log(res);
+      },
+      err => console.log(err)
+    )
   }
 
 }

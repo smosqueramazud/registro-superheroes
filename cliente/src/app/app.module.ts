@@ -41,13 +41,15 @@ import { ConexionApiService } from './services/conexion-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { VistaCardsComponent } from './vista-cards/vista-cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     AgregarComponent,
-    ModificarComponent
+    ModificarComponent,
+    VistaCardsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,58 @@
+table {
+    width: 100%;
+    margin-top: 2vh;
+  }
+
+.o-box-button{
+    padding: 2vh;
+}
+
+.o-box-table{
+    padding: 0 2vh;
+}
+
+.o-box-form--grid{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(auto, 1fr);
+    gap: 2vh;
+    padding: 0 6vh 0 4vh;
+}
+
+.o-title{
+    padding: 2vh 0;
+}
+
+.o-box-button-add{
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+}
+
+.button-add{
+    width: 18vh;
+    height: 5vh;
+}
+
+.o-card-grid{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    width: 50%;
+}
+
+.o-rows-super{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.o-box-card{
+    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.o-box-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -44,6 +44,12 @@ export class ConexionApiService {
       let url = '/api/';
       return this.http.put(url + id, obj);
     }
+
+    //servicio que trae un superheroe por su nombre
+    getSuperheroePorId(id: string){
+      let url = '/api/id/';
+      return this.http.get(url + id);
+    }
     
 }
 

@@ -40,6 +40,7 @@ import { ModificarComponent } from './components/modificar/modificar.component';
 import { ConexionApiService } from './services/conexion-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -85,7 +86,10 @@ import { FormsModule } from '@angular/forms';
     MatSortModule,
     MatPaginatorModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    //Loading
+    NgxSpinnerModule
+
   ],
   providers: [
     ConexionApiService

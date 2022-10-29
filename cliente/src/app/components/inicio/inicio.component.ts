@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ConexionApiService } from 'src/app/services/conexion-api.service';
+import { ConexionApiService, Superheroe } from 'src/app/services/conexion-api.service';
+import { NgxSpinnerService } from "ngx-spinner";
+
 
 @Component({
   selector: 'app-inicio',
@@ -8,7 +10,13 @@ import { ConexionApiService } from 'src/app/services/conexion-api.service';
 })
 export class InicioComponent implements OnInit {
 
-  constructor(private conexionApi: ConexionApiService) { }
+  //ce crea la lista de superheroes con la interface Superheore
+  listaSuperheroes: Superheroe[];
+
+  displayedColumns: string[] = ['nombre', 'grupo', 'ciudad', 'condicion', 'poder', 'vehiculo', 'tipo_vehiculo', 'logo', 'modificar', 'eliminar'];
+
+  constructor(private conexionApi: ConexionApiService,
+    private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.obtenerListaSuperheroes();
@@ -16,11 +24,31 @@ export class InicioComponent implements OnInit {
 
 
   obtenerListaSuperheroes(){
+    this.spinner.show();
     this.conexionApi.getSuperheroes().subscribe(
       res => {
+        this.spinner.hide();
         console.log(res);
+        this.listaSuperheroes = <any>res; //se debe dejar tipo any ya que listaSuperheroes es tipo Superheroe
       },
-      err => console.log(err)
+      err => {
+        this.spinner.hide();
+        console.log(err)
+        alert(`Ha ocurrido un consultando la lista de superhéroes, por favor intenta de nuevo mas tarde`)
+      }
+    )
+  }
+
+  eliminarSuperheroe(id:string, nombre:string){
+    this.conexionApi.eliminarSuperheroe(id).subscribe(
+      res => {
+        alert(`El superhéroe ${nombre} se elimino correctamente`);
+        this.obtenerListaSuperheroes();
+      },
+      err => {
+        console.log(err)
+        alert(`Ha ocurrido un error eliminando el superhéroe, por favor intenta de nuevo mas tarde`)
+      }
     )
   }
 

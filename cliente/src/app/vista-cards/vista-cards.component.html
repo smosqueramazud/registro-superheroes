@@ -1,1 +1,65 @@
-<p>vista-cards works!</p>
+
+<ngx-spinner></ngx-spinner>
+<div class="o-box-button">
+  <div class="o-box-button-buttons">
+    <button mat-raised-button routerLink="/agregar">
+      <mat-icon>add</mat-icon>
+      <span>Agregar Superhéroe</span>
+    </button>
+
+    <button mat-raised-button routerLink="/inicio">
+      <mat-icon>remove_red_eye</mat-icon>
+      <span>Cambiar vista</span>
+    </button>
+  </div>
+
+
+</div>
+
+<div class="o-box-table">
+  <div class="o-box-table-cards">
+    <div *ngFor="let super of listaSuperheroes">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <img mat-card-avatar class="example-header-image" src="{{super.logo}}" alt="logo">
+          <mat-card-title>{{super.nombre}}</mat-card-title>
+          <mat-card-subtitle>{{super.grupo}}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="o-box-table-cards-box-img">
+          <img mat-card-image src="{{super.logo}}" alt="logo">
+        </div>
+        <mat-card-content>
+          <div class="o-box-table-cards-table-data">
+            <p class="negrita">Ciudad de Operación:</p>
+            <p class="text-center">{{super.ciudad_operacion}}</p>
+
+            <p class="negrita">Condición Actual:</p>
+            <p class="text-center">{{super.condicion}}</p>
+            
+            <p class="negrita">Superpoder:</p>
+            <p class="text-center">{{super.superpoder}}</p>
+
+            <p class="negrita">Tiene Vehículo:</p>
+            <p class="text-center">{{super.vehiculo}}</p>
+
+            <p class="negrita">Tipo de Vehículo:</p>
+            <p class="text-center">{{super.tipo_vehiculo}}</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="modificarSuperheroe(super.id_superheroe)">
+            <mat-icon>create</mat-icon>
+        </button>
+        <button mat-raised-button color="warn" (click)="eliminarSuperheroe(element.id_superheroe, element.nombre)">
+          <mat-icon>delete</mat-icon>
+      </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+
+</div>
+
+
+  

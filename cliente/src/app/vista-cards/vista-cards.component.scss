@@ -1,0 +1,53 @@
+table {
+    width: 100%;
+    margin-top: 2vh;
+  }
+
+.o-box-button{
+    padding: 2vh;
+}
+
+.o-box-table{
+    padding: 0 2vh;
+}
+
+.o-box-button-buttons{
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vh;
+}
+
+
+.example-card {
+    max-width: 400px;
+  }
+  
+.example-header-image {
+    background-size: cover;
+}
+
+.o-box-table-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 2vh;
+}
+
+.o-box-table-cards-table-data{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 1vh;
+}
+
+.mat-card-image{
+  width: 15vh !important;
+}
+
+.o-box-table-cards-box-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+}

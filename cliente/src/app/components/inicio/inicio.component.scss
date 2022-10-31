@@ -5,8 +5,42 @@ table {
 
 .o-box-button{
     padding: 2vh;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    gap: 20vh;
 }
 
 .o-box-table{
     padding: 0 2vh;
+}
+
+.o-box-button-buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vh;
+    height: 5vh;
+}
+
+.o-box-button-buscadores{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vh;
+    height: 5vh;
+}
+
+
+.o-box-button-buscadores-box{
+    display: grid;
+    grid-template-columns: 75% 22%;
+    gap: 1vh;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    height: 5vh !important;
+}
+
+.o-height{
+    height: 5vh;
 }

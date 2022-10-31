@@ -1,10 +1,46 @@
 
 <ngx-spinner></ngx-spinner>
 <div class="o-box-button">
+  <div class="o-box-button-buttons">
     <button mat-raised-button routerLink="/agregar">
-        <mat-icon>add</mat-icon>
-        <span>Agregar Superhéroe</span>
+      <mat-icon>add</mat-icon>
+      <span>Agregar Superhéroe</span>
+    </button>
+
+    <button mat-raised-button (click)="cambiarVista()">
+      <mat-icon>remove_red_eye</mat-icon>
+      <span>Cambiar vista</span>
+    </button>
+  </div>
+
+  <div class="o-box-button-buscadores">
+    <div class="o-box-button-buscadores-box">
+        <mat-form-field appearance="fill" class="o-height">
+          <mat-label>Buscar por Nombre</mat-label>
+          <input matInput [(ngModel)]="nombreBuscar">
+      </mat-form-field>
+
+        <button mat-raised-button class="o-search-button" class="o-height" (click)="buscarPorNombre(nombreBuscar)">
+          <mat-icon>create</mat-icon>
       </button>
+
+    </div>
+
+    <div class="o-box-button-buscadores-box">
+      <mat-form-field appearance="fill">
+        <mat-label>Buscar por Ciudad</mat-label>
+        <input matInput [(ngModel)]="ciudadBuscar">
+    </mat-form-field>
+
+      <button mat-raised-button class="o-height" (click)="buscarPorCiudad(ciudadBuscar)">
+        <mat-icon>create</mat-icon>
+    </button>
+
+  </div>
+
+  </div>
+
+
 </div>
 
 <div class="o-box-table">

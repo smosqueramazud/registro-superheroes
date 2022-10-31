@@ -16,6 +16,9 @@ export class InicioComponent implements OnInit {
 
   displayedColumns: string[] = ['nombre', 'grupo', 'ciudad', 'condicion', 'poder', 'vehiculo', 'tipo_vehiculo', 'logo', 'modificar', 'eliminar'];
 
+  nombreBuscar;
+  ciudadBuscar;
+
   constructor(private conexionApi: ConexionApiService,
     private spinner: NgxSpinnerService,
     private router: Router) { }
@@ -55,6 +58,56 @@ export class InicioComponent implements OnInit {
 
   modificarSuperheroe(id:string){
     this.router.navigate(['/modificar/' + id]); //se manda el id por url
+  }
+
+  cambiarVista(){
+    let array =[];
+    array = this.listaSuperheroes;
+    this.router.navigateByUrl('/vista-cards', {state: {array}}); //se manda el id por url
+  }
+
+  buscarPorNombre(name){
+    this.spinner.show();
+    if(name){
+      this.conexionApi.getSuperheroePorNombre(name).subscribe(
+        res => {
+          console.log(res);
+          this.listaSuperheroes = <any>res;
+          if(this.listaSuperheroes.length === 0){
+            alert('No se encontro ningun super heroe con el nombre ingresado, prueba de nuevo con otro nombre');
+            this.obtenerListaSuperheroes();
+          }
+          this.spinner.hide();
+        },
+        err => {
+          this.spinner.hide();
+          console.log(err)
+          alert(`Ha ocurrido un error consultando el superhéroe, por favor intenta de nuevo mas tarde`)
+        }
+      )
+    }
+  }
+
+  buscarPorCiudad(city){
+    this.spinner.show();
+    if(city){
+      this.conexionApi.getSuperheroePorCiudad(city).subscribe(
+        res => {
+          console.log(res);
+          this.listaSuperheroes = <any>res;
+          if(this.listaSuperheroes.length === 0){
+            alert('No se encontro ningun super heroe con la ciudad ingresada, prueba de nuevo con otro ciudad');
+            this.obtenerListaSuperheroes();
+          }
+          this.spinner.hide();
+        },
+        err => {
+          this.spinner.hide();
+          console.log(err)
+          alert(`Ha ocurrido un error consultando el superhéroe, por favor intenta de nuevo mas tarde`)
+        }
+      )
+    }
   }
 
 }

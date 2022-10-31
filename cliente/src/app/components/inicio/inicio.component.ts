@@ -71,7 +71,6 @@ export class InicioComponent implements OnInit {
     if(name){
       this.conexionApi.getSuperheroePorNombre(name).subscribe(
         res => {
-          console.log(res);
           this.listaSuperheroes = <any>res;
           if(this.listaSuperheroes.length === 0){
             alert('No se encontro ningun super heroe con el nombre ingresado, prueba de nuevo con otro nombre');
@@ -93,7 +92,6 @@ export class InicioComponent implements OnInit {
     if(city){
       this.conexionApi.getSuperheroePorCiudad(city).subscribe(
         res => {
-          console.log(res);
           this.listaSuperheroes = <any>res;
           if(this.listaSuperheroes.length === 0){
             alert('No se encontro ningun super heroe con la ciudad ingresada, prueba de nuevo con otro ciudad');

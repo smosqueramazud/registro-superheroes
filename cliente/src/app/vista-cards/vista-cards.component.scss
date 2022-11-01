@@ -5,6 +5,9 @@ table {
 
 .o-box-button{
     padding: 2vh;
+    display: grid;
+    grid-template-columns: 35% 52% 10%;
+    gap: 2vh;
 }
 
 .o-box-table{
@@ -12,13 +15,69 @@ table {
 }
 
 .o-box-button-buttons{
-    width: 30%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vh;
+  height: 5vh;
 }
 
+.o-box-button-buscadores{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vh;
+  height: 5vh;
+}
 
+.o-box-button-buscadores-box{
+  display: grid;
+  grid-template-columns: 75% 22%;
+  gap: 1vh;
+  
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+  height: 5vh !important;
+}
+
+.o-height{
+  height: 5vh;
+}
+
+.o-button-vehiculo{
+  height: 5vh;
+  background-color: #e62429;
+  color: #fff;
+}
+
+.o-button-add{
+  width: 28vh;
+  background-color: #e62429;
+  color: #fff;
+}
+
+.o-box-button-automovil{
+  display: flex;
+  justify-content: flex-end;
+}
+::ng-deep .mat-form-field-label-wrapper{
+  font-weight: bold;
+  color: #202020;
+}
+
+::ng-deep.mat-form-field-ripple{
+  background-color: #e62429 !important;
+}
+
+::ng-deep.mat-form-field.mat-focused .mat-form-field-label {
+  color: #e62429 !important;
+}
+
+::ng-deep .mat-header-cell{
+  font-weight: bold;
+  color: #202020;
+}
 .example-card {
     max-width: 400px;
   }

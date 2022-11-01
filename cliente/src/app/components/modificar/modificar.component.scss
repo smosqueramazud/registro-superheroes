@@ -29,9 +29,16 @@ table {
     padding-top: 3vh;
 }
 
-.button-add{
+.button-add,
+.button-back{
     width: 18vh;
     height: 5vh;
+    background-color: #e62429;
+    color: #fff;
+}
+
+.button-back{
+    width: 14vh;
 }
 
 .o-card-grid{

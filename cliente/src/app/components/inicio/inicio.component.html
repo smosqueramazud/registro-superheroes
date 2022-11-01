@@ -2,12 +2,12 @@
 <ngx-spinner></ngx-spinner>
 <div class="o-box-button">
   <div class="o-box-button-buttons">
-    <button mat-raised-button routerLink="/agregar">
+    <button mat-raised-button routerLink="/agregar" class="o-button-add">
       <mat-icon>add</mat-icon>
       <span>Agregar Superhéroe</span>
     </button>
 
-    <button mat-raised-button (click)="cambiarVista()">
+    <button mat-raised-button (click)="cambiarVista()" class="o-button-add">
       <mat-icon>remove_red_eye</mat-icon>
       <span>Cambiar vista</span>
     </button>
@@ -21,7 +21,7 @@
       </mat-form-field>
 
         <button mat-raised-button class="o-search-button" class="o-height" (click)="buscarPorNombre(nombreBuscar)">
-          <mat-icon>create</mat-icon>
+          <mat-icon>search</mat-icon>
       </button>
 
     </div>
@@ -33,11 +33,18 @@
     </mat-form-field>
 
       <button mat-raised-button class="o-height" (click)="buscarPorCiudad(ciudadBuscar)">
-        <mat-icon>create</mat-icon>
+        <mat-icon>search</mat-icon>
     </button>
 
   </div>
 
+  </div>
+
+  <div class="o-box-button-automovil">
+
+    <button mat-raised-button class="o-button-vehiculo" (click)="listarVehiculo()">
+      <span>Listar Vehículo</span>
+    </button>
   </div>
 
 

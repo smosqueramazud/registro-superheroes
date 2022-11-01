@@ -68,44 +68,78 @@ export class InicioComponent implements OnInit {
 
   buscarPorNombre(name){
     this.spinner.show();
-    if(name){
-      this.conexionApi.getSuperheroePorNombre(name).subscribe(
-        res => {
-          this.listaSuperheroes = <any>res;
-          if(this.listaSuperheroes.length === 0){
-            alert('No se encontro ningun super heroe con el nombre ingresado, prueba de nuevo con otro nombre');
-            this.obtenerListaSuperheroes();
+    if(name === undefined || name === ''){
+      this.obtenerListaSuperheroes();
+    }else{
+      if(name){
+        this.conexionApi.getSuperheroePorNombre(name).subscribe(
+          res => {
+            this.listaSuperheroes = <any>res;
+            if(this.listaSuperheroes.length === 0){
+              alert('No se encontro ningun super heroe con el nombre ingresado, prueba de nuevo con otro nombre');
+              this.obtenerListaSuperheroes();
+            }
+            this.spinner.hide();
+          },
+          err => {
+            this.spinner.hide();
+            console.log(err)
+            alert(`Ha ocurrido un error consultando el superhéroe, por favor intenta de nuevo mas tarde`)
           }
-          this.spinner.hide();
-        },
-        err => {
-          this.spinner.hide();
-          console.log(err)
-          alert(`Ha ocurrido un error consultando el superhéroe, por favor intenta de nuevo mas tarde`)
-        }
-      )
+        )
+      }
     }
   }
 
   buscarPorCiudad(city){
     this.spinner.show();
-    if(city){
-      this.conexionApi.getSuperheroePorCiudad(city).subscribe(
-        res => {
-          this.listaSuperheroes = <any>res;
-          if(this.listaSuperheroes.length === 0){
-            alert('No se encontro ningun super heroe con la ciudad ingresada, prueba de nuevo con otro ciudad');
-            this.obtenerListaSuperheroes();
+    if(city === undefined || city === ''){
+      this.obtenerListaSuperheroes();
+    }else{
+      if(city){
+        this.conexionApi.getSuperheroePorCiudad(city).subscribe(
+          res => {
+            this.listaSuperheroes = <any>res;
+            if(this.listaSuperheroes.length === 0){
+              alert('No se encontro ningun super heroe con la ciudad ingresada, prueba de nuevo con otro ciudad');
+              this.obtenerListaSuperheroes();
+            }
+            this.spinner.hide();
+          },
+          err => {
+            this.spinner.hide();
+            console.log(err)
+            alert(`Ha ocurrido un error consultando el superhéroe, por favor intenta de nuevo mas tarde`)
           }
-          this.spinner.hide();
-        },
-        err => {
-          this.spinner.hide();
-          console.log(err)
-          alert(`Ha ocurrido un error consultando el superhéroe, por favor intenta de nuevo mas tarde`)
-        }
-      )
+        )
+      }
     }
+  }
+
+  listarVehiculo(){
+    this.spinner.show();
+    this.conexionApi.getSuperheroes().subscribe(
+      res => {
+        this.spinner.hide();
+        this.listaSuperheroes = <any>res; //se debe dejar tipo any ya que listaSuperheroes es tipo Superheroe
+        this.listaSuperheroes.sort(function (a, b) {
+          // A va primero que B
+          if (a.tipo_vehiculo < b.tipo_vehiculo)
+              return -1;
+          // B va primero que A
+          else if (a.tipo_vehiculo > b.tipo_vehiculo)
+              return 1;
+          // A y B son iguales
+          else 
+              return 0;
+      });
+      },
+      err => {
+        this.spinner.hide();
+        console.log(err)
+        alert(`Ha ocurrido un error consultando la lista de superhéroes, por favor intenta de nuevo mas tarde`)
+      }
+    )  
   }
 
 }

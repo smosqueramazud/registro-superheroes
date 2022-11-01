@@ -66,3 +66,15 @@ table {
 ::ng-deep .mat-button-wrapper:hover{
     color: white !important;
 }
+
+.o-button-hover:hover{
+    background-color: #B52429;
+}
+
+::ng-deep.mat-form-field-ripple{
+    background-color: #e62429 !important;
+}
+
+::ng-deep.mat-form-field.mat-focused .mat-form-field-label {
+    color: #e62429 !important;
+}

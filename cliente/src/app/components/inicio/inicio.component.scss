@@ -63,7 +63,6 @@ table {
     justify-content: flex-end;
 }
 ::ng-deep .mat-form-field-label-wrapper{
-    font-weight: bold;
     color: #202020;
 }
 
@@ -78,4 +77,12 @@ table {
 ::ng-deep .mat-header-cell{
     font-weight: bold;
     color: #202020;
+}
+
+.o-button-hover:hover{
+    background-color: #B52429;
+}
+
+.o-button-white-hover:hover{
+    background-color: #f5f5f5;
 }

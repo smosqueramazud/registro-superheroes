@@ -42,6 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { VistaCardsComponent } from './vista-cards/vista-cards.component';
+import { HeaderAppComponent } from './components/header-app/header-app.component';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { VistaCardsComponent } from './vista-cards/vista-cards.component';
     InicioComponent,
     AgregarComponent,
     ModificarComponent,
-    VistaCardsComponent
+    VistaCardsComponent,
+    HeaderAppComponent
   ],
   imports: [
     BrowserModule,
@@ -90,11 +93,12 @@ import { VistaCardsComponent } from './vista-cards/vista-cards.component';
     HttpClientModule,
     FormsModule,
     //Loading
-    NgxSpinnerModule
+    NgxSpinnerModule,
 
   ],
   providers: [
-    ConexionApiService
+    ConexionApiService,
+    HeaderAppComponent
   ],
   bootstrap: [AppComponent]
 })

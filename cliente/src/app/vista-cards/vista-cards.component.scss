@@ -11,7 +11,7 @@ table {
 }
 
 .o-box-table{
-    padding: 0 2vh;
+  padding: 4vh 2vh;
 }
 
 .o-box-button-buttons{
@@ -62,7 +62,6 @@ table {
   justify-content: flex-end;
 }
 ::ng-deep .mat-form-field-label-wrapper{
-  font-weight: bold;
   color: #202020;
 }
 
@@ -74,10 +73,6 @@ table {
   color: #e62429 !important;
 }
 
-::ng-deep .mat-header-cell{
-  font-weight: bold;
-  color: #202020;
-}
 .example-card {
     max-width: 400px;
   }
@@ -110,3 +105,37 @@ table {
   align-items: center;
   margin: 2vh 0;
 }
+
+@media (min-width: 1280px) and (max-width: 1400px){
+
+  .o-button-add{
+    width: 32vh;
+  }
+
+  .o-box-button-buttons,
+  .o-height,
+  .o-button-vehiculo{
+      height: 7vh;
+  }
+
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+      height: 7vh !important;
+  }
+  
+  .o-box-button{
+      grid-template-columns: 35% 52% 11%;
+  }
+
+  .o-box-table-cards-box-img{
+    height: 15vh;
+  }
+ 
+  .o-box-table-cards-table-data{
+    gap: 0;
+  }
+
+  .mat-card-actions{
+    padding: 0 0 1vh 0 !important;
+  }
+}
+

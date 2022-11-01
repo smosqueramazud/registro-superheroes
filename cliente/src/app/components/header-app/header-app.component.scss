@@ -20,3 +20,9 @@ mat-toolbar{
   color: #e62429 !important;
 }
  
+@media (min-width: 1280px) and (max-width: 1400px){
+  .o-box-logo-marvel {
+    width: 20vh;
+    height: 10vh;
+  }
+}

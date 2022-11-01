@@ -63,3 +63,27 @@ table {
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 1400px){
+    .button-back{
+      width: 18vh;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1400px){
+
+    .button-back,
+    .button-add{
+        width: 22vh;
+        height: 7vh;
+    }
+
+    .o-box-button-add{
+        padding-top: 2vh;
+    }
+
+    ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+        height: 7vh !important;
+    }
+    
+}

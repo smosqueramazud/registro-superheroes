@@ -7,7 +7,7 @@
       <span>Agregar Superhéroe</span>
     </button>
 
-    <button mat-raised-button routerLink="/inicio" class="o-button-add">
+    <button mat-raised-button routerLink="/inicio" class="o-button-add" *ngIf="!movil">
       <mat-icon>remove_red_eye</mat-icon>
       <span>Cambiar vista</span>
     </button>
@@ -39,9 +39,16 @@
 
   </div>
 
+  <div class="o-box-button-automovil" *ngIf="movil">
+
+    <button mat-raised-button class="o-button-vehiculo" (click)="listarVehiculo()">
+      <span>Listar Vehículo</span>
+    </button>
   </div>
 
-  <div class="o-box-button-automovil">
+  </div>
+
+  <div class="o-box-button-automovil" *ngIf="!movil">
 
     <button mat-raised-button class="o-button-vehiculo" (click)="listarVehiculo()">
       <span>Listar Vehículo</span>
@@ -85,7 +92,7 @@
           <button mat-raised-button (click)="modificarSuperheroe(super.id_superheroe)">
             <mat-icon>create</mat-icon>
         </button>
-        <button mat-raised-button color="warn" (click)="eliminarSuperheroe(element.id_superheroe, element.nombre)">
+        <button mat-raised-button color="warn" (click)="eliminarSuperheroe(super.id_superheroe, super.nombre)">
           <mat-icon>delete</mat-icon>
       </button>
         </mat-card-actions>

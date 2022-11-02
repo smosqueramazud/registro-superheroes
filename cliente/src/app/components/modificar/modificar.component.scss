@@ -37,6 +37,11 @@ table {
     color: #fff;
 }
 
+.button-back-movil{
+    background-color: #e62429;
+    color: #fff;
+}
+
 .button-back{
     width: 14vh;
 }
@@ -64,6 +69,19 @@ table {
     align-items: center;
 }
 
+.o-button-hover:hover{
+    background-color: #B52429;
+}
+
+::ng-deep.mat-form-field-ripple{
+    background-color: #e62429 !important;
+}
+
+::ng-deep.mat-form-field.mat-focused .mat-form-field-label {
+    color: #e62429 !important;
+}
+
+
 @media (max-width: 1400px){
     .button-back{
       width: 18vh;
@@ -86,4 +104,15 @@ table {
         height: 7vh !important;
     }
     
+}
+
+//Celulares
+@media (max-width: 1024px){
+    .o-box-form--grid{
+        padding: 0 3vh 0 2vh;
+    }
+
+    .o-title {
+    text-align: center;
+    }
 }

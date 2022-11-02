@@ -1,7 +1,7 @@
 
 <ngx-spinner></ngx-spinner>
 
-<div class="o-box-button">
+<div class="o-box-button" *ngIf="!movil">
   <div class="o-box-button-buttons">
     <button mat-raised-button routerLink="/agregar" class="o-button-add o-button-hover">
       <mat-icon>add</mat-icon>
@@ -51,7 +51,7 @@
 
 </div>
 
-<div class="o-box-table">
+<div class="o-box-table" *ngIf="!movil">
     <table mat-table [dataSource]="listaSuperheroes" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
@@ -133,5 +133,5 @@
       </table>
 </div>
 
-
+<app-vista-cards *ngIf="movil"></app-vista-cards>
   

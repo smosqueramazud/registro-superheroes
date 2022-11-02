@@ -1,8 +1,12 @@
 <ngx-spinner></ngx-spinner>
 <div class="o-box-button">
-    <button mat-raised-button routerLink="/inicio" class="button-back o-button-hover">
+    <button mat-raised-button routerLink="/inicio" class="button-back o-button-hover" *ngIf="!movil">
         <mat-icon>keyboard_arrow_left</mat-icon>
         <span>Regresar</span>
+      </button>
+
+      <button mat-fab color="warn" aria-label="Example icon button with a home icon" *ngIf="movil" routerLink="/vista-cards" class="button-back-movil">
+        <mat-icon>keyboard_arrow_left</mat-icon>
       </button>
 </div>
 <div class="o-box-table">
@@ -46,7 +50,7 @@
         </mat-form-field>
     </div>
     <div class="o-box-button-add">
-        <button mat-raised-button (click)="agregarSuperheroe()" class="button-add o-button-hover">
+        <button mat-raised-button (click)="agregarSuperheroe()" class="button-add o-button-hover" [disabled] = "add">
             <mat-icon>add</mat-icon>
             <span>Agregar</span>
           </button>
@@ -68,7 +72,7 @@
                         <div><p>¿Tiene Vehículo?:</p></div>
                         <div><p>Tipo de vehículo:</p></div>
                     </div>
-                    <div>
+                    <div class="o-rows-super-items-movil">
                         <div><p>{{superheroe.nombre}}</p></div>
                         <div><p>{{superheroe.grupo}}</p></div>
                         <div><p>{{superheroe.ciudad_operacion}}</p></div>

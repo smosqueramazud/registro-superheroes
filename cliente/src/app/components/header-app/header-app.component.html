@@ -4,7 +4,11 @@
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/inicio">
+      <button mat-menu-item routerLink="/inicio" *ngIf="!movil">
+        <mat-icon>home</mat-icon>
+        <span>Inicio</span>
+      </button>
+      <button mat-menu-item routerLink="/vista-cards" *ngIf="movil">
         <mat-icon>home</mat-icon>
         <span>Inicio</span>
       </button>
@@ -12,24 +16,20 @@
         <mat-icon>add</mat-icon>
         <span>Agregar Superhéroe</span>
       </button>
-      <button mat-menu-item routerLink="/modificar">
-        <mat-icon>create</mat-icon>
-        <span>Modificar Superhéroe</span>
-      </button>
     </mat-menu>
     <span>Universo Marvel</span>
       <img src="https://1000logos.net/wp-content/uploads/2017/11/Marvel-Studios-Logo-2002.png" class="o-box-logo-marvel">
     <span class="example-spacer"></span>
-    <div>
+    <div class="o-movil">
       <a mat-button routerLink="/inicio" > Inicio</a>
       <a mat-button routerLink="/agregar"> Agregar Superhéroe</a>
       <a mat-button routerLink="/modificar"> Modificar Superhéroe</a>
       <a mat-button> Contacts </a>
     </div>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" class="o-movil">
       <mat-icon>favorite</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="o-movil">
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>

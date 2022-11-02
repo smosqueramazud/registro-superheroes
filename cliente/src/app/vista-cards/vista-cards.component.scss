@@ -139,3 +139,46 @@ table {
   }
 }
 
+//Celulares
+@media (max-width: 1024px){
+
+  .o-box-button{
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 20vh;
+  }
+
+  .o-box-button-buttons{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: center;
+  }
+
+  .o-box-button-buscadores {
+    grid-template-columns: 1fr;
+    gap: 1vh;
+    justify-items: center;
+  }
+
+  .o-box-button-buscadores-box{
+    height: 6vh;
+  }
+
+  .o-button-add,
+  .o-button-vehiculo{
+    width: 33vh;
+  }
+
+  .o-box-table{
+    padding: 1vh 2vh;
+  }
+
+  .o-box-table-cards{
+    grid-template-columns: 1fr;
+  }
+
+  .o-movil{
+    display: none;
+  }
+
+
+}

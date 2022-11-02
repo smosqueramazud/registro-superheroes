@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ConexionApiService, Superheroe } from 'src/app/services/conexion-api.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import { Router } from '@angular/router';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class InicioComponent implements OnInit {
 
   nombreBuscar;
   ciudadBuscar;
+  movil = false;
 
   constructor(private conexionApi: ConexionApiService,
     private spinner: NgxSpinnerService,
@@ -25,6 +27,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerListaSuperheroes();
+    this.validarScreenWidth();
   }
 
 
@@ -140,6 +143,15 @@ export class InicioComponent implements OnInit {
         alert(`Ha ocurrido un error consultando la lista de superhéroes, por favor intenta de nuevo mas tarde`)
       }
     )  
+  }
+
+  validarScreenWidth(){
+    if(screen.width <= 1024){
+      this.movil = true;
+    }else{
+      this.movil = false
+    }
+    window.sessionStorage.setItem('movil', String(this.movil));
   }
 
 }

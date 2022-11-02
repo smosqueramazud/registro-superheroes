@@ -98,7 +98,8 @@ import { HeaderAppComponent } from './components/header-app/header-app.component
   ],
   providers: [
     ConexionApiService,
-    HeaderAppComponent
+    HeaderAppComponent,
+    VistaCardsComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderAppComponent implements OnInit {
 
+  movil;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.movil = JSON.parse(sessionStorage.getItem('movil'));
   }
 
 }

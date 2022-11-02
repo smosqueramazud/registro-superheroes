@@ -37,6 +37,11 @@ table {
     color: #fff;
 }
 
+.button-back-movil{
+    background-color: #e62429;
+    color: #fff;
+}
+
 .button-back{
     width: 14vh;
 }
@@ -63,7 +68,7 @@ table {
     align-items: center;
 }
 
-.o-button-hover:hover{
+.o-button-hover:hover:enabled{ //hover solo cuando este activo
     background-color: #B52429;
 }
 
@@ -97,4 +102,26 @@ table {
         height: 7vh !important;
     }
     
+}
+
+//Celulares
+@media (max-width: 1024px){
+    .o-box-form--grid{
+        padding: 0 3vh 0 2vh;
+    }
+
+    .o-title {
+    text-align: center;
+    }
+
+    .o-card-grid{
+        grid-template-columns: 30% 70%;
+        gap: 2vh;
+        place-items: center;
+        width: 100%;
+    }
+
+    .o-rows-super-items-movil{
+        text-align: center;
+    }
 }

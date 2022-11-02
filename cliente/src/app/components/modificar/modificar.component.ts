@@ -17,6 +17,7 @@ export class ModificarComponent implements OnInit {
   }
 
   superHeroe;
+  movil;
 
   constructor(private conexionApi: ConexionApiService,
     private router: Router,
@@ -27,6 +28,7 @@ export class ModificarComponent implements OnInit {
     this.superHeroe = false;
     const id_entrada = this.activatedRoute.snapshot.params.id; //recuperamos el id que llega por url
     this.consultarSuperheroe(id_entrada);
+    this.movil = JSON.parse(sessionStorage.getItem('movil'));
   }
 
   consultarSuperheroe(id:string){

@@ -15,6 +15,7 @@ export class VistaCardsComponent implements OnInit {
 
   nombreBuscar;
   ciudadBuscar;
+  movil;
 
   constructor(private conexionApi: ConexionApiService,
     private spinner: NgxSpinnerService,
@@ -25,6 +26,7 @@ export class VistaCardsComponent implements OnInit {
     if(this.listaSuperheroes === undefined){
       this.obtenerListaSuperheroes();
     }
+    this.movil = JSON.parse(sessionStorage.getItem('movil'));
   }
 
 

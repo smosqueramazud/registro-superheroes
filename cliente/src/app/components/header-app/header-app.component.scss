@@ -26,3 +26,16 @@ mat-toolbar{
     height: 10vh;
   }
 }
+
+//Celulares
+@media (max-width: 1024px){
+  .o-movil{
+    display: none;
+  }
+
+  .o-box-logo-marvel {
+    width: 12vh;
+    height: 5vh;
+    margin-left: 8vh;
+  }
+}

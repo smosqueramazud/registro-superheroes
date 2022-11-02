@@ -33,13 +33,13 @@ table {
 .button-back{
     width: 18vh;
     height: 5vh;
-    background-color: #e62429;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
 }
 
 .button-back-movil{
-    background-color: #e62429;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
 }
 
 .button-back{
@@ -70,15 +70,15 @@ table {
 }
 
 .o-button-hover:hover{
-    background-color: #B52429;
+    background-color: var(--hover-button-color);
 }
 
 ::ng-deep.mat-form-field-ripple{
-    background-color: #e62429 !important;
+    background-color: var(--primary-color) !important;
 }
 
 ::ng-deep.mat-form-field.mat-focused .mat-form-field-label {
-    color: #e62429 !important;
+    color: var(--primary-color) !important;
 }
 
 

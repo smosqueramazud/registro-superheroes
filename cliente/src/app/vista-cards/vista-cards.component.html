@@ -2,12 +2,12 @@
 <ngx-spinner></ngx-spinner>
 <div class="o-box-button">
   <div class="o-box-button-buttons">
-    <button mat-raised-button routerLink="/agregar" class="o-button-add">
+    <button mat-raised-button routerLink="/agregar" class="o-button-add o-button-hover">
       <mat-icon>add</mat-icon>
       <span>Agregar Superhéroe</span>
     </button>
 
-    <button mat-raised-button routerLink="/inicio" class="o-button-add" *ngIf="!movil">
+    <button mat-raised-button routerLink="/inicio" class="o-button-add o-button-hover" *ngIf="!movil">
       <mat-icon>remove_red_eye</mat-icon>
       <span>Cambiar vista</span>
     </button>
@@ -21,7 +21,7 @@
           <input matInput [(ngModel)]="nombreBuscar">
       </mat-form-field>
 
-        <button mat-raised-button class="o-search-button" class="o-height" (click)="buscarPorNombre(nombreBuscar)">
+        <button mat-raised-button  class="o-height o-button-white-hover" (click)="buscarPorNombre(nombreBuscar)">
           <mat-icon>search</mat-icon>
       </button>
 
@@ -33,7 +33,7 @@
         <input matInput [(ngModel)]="ciudadBuscar">
     </mat-form-field>
 
-      <button mat-raised-button class="o-height" (click)="buscarPorCiudad(ciudadBuscar)">
+      <button mat-raised-button class="o-height o-button-white-hover" (click)="buscarPorCiudad(ciudadBuscar)" >
         <mat-icon>search</mat-icon>
     </button>
 
@@ -41,7 +41,7 @@
 
   <div class="o-box-button-automovil" *ngIf="movil">
 
-    <button mat-raised-button class="o-button-vehiculo" (click)="listarVehiculo()">
+    <button mat-raised-button class="o-button-vehiculo o-button-hover" (click)="listarVehiculo()">
       <span>Listar Vehículo</span>
     </button>
   </div>
@@ -50,7 +50,7 @@
 
   <div class="o-box-button-automovil" *ngIf="!movil">
 
-    <button mat-raised-button class="o-button-vehiculo" (click)="listarVehiculo()">
+    <button mat-raised-button class="o-button-vehiculo o-button-hover" (click)="listarVehiculo()">
       <span>Listar Vehículo</span>
     </button>
   </div>
@@ -73,26 +73,26 @@
         <mat-card-content>
           <div class="o-box-table-cards-table-data">
             <p class="negrita">Ciudad de Operación:</p>
-            <p class="text-center">{{super.ciudad_operacion}}</p>
+            <p class="text-right">{{super.ciudad_operacion}}</p>
 
             <p class="negrita">Condición Actual:</p>
-            <p class="text-center">{{super.condicion}}</p>
+            <p class="text-right">{{super.condicion}}</p>
             
             <p class="negrita">Superpoder:</p>
-            <p class="text-center">{{super.superpoder}}</p>
+            <p class="text-right">{{super.superpoder}}</p>
 
             <p class="negrita">Tiene Vehículo:</p>
-            <p class="text-center">{{super.vehiculo}}</p>
+            <p class="text-right">{{super.vehiculo}}</p>
 
             <p class="negrita">Tipo de Vehículo:</p>
-            <p class="text-center">{{super.tipo_vehiculo}}</p>
+            <p class="text-right">{{super.tipo_vehiculo}}</p>
           </div>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button (click)="modificarSuperheroe(super.id_superheroe)">
+          <button mat-raised-button (click)="modificarSuperheroe(super.id_superheroe)" class="o-button-white-hover">
             <mat-icon>create</mat-icon>
         </button>
-        <button mat-raised-button color="warn" (click)="eliminarSuperheroe(super.id_superheroe, super.nombre)">
+        <button mat-raised-button color="warn" (click)="eliminarSuperheroe(super.id_superheroe, super.nombre)" class="o-button-hover">
           <mat-icon>delete</mat-icon>
       </button>
         </mat-card-actions>

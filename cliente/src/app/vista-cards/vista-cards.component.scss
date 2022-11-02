@@ -47,14 +47,14 @@ table {
 
 .o-button-vehiculo{
   height: 5vh;
-  background-color: #e62429;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 .o-button-add{
   width: 28vh;
-  background-color: #e62429;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 .o-box-button-automovil{
@@ -62,15 +62,15 @@ table {
   justify-content: flex-end;
 }
 ::ng-deep .mat-form-field-label-wrapper{
-  color: #202020;
+  color: var(--secundary-color);
 }
 
 ::ng-deep.mat-form-field-ripple{
-  background-color: #e62429 !important;
+  background-color: var(--primary-color) !important;
 }
 
 ::ng-deep.mat-form-field.mat-focused .mat-form-field-label {
-  color: #e62429 !important;
+  color: var(--primary-color) !important;
 }
 
 .example-card {
@@ -97,6 +97,7 @@ table {
 
 .mat-card-image{
   width: 15vh !important;
+  min-width: 20vh !important;
 }
 
 .o-box-table-cards-box-img{
@@ -104,6 +105,14 @@ table {
   justify-content: center;
   align-items: center;
   margin: 2vh 0;
+}
+
+.o-button-hover:hover{
+  background-color: var(--hover-button-color);
+}
+
+.o-button-white-hover:hover{
+  background-color: var(--hover-white-color);
 }
 
 @media (min-width: 1280px) and (max-width: 1400px){

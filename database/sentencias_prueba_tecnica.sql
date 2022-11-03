@@ -1,4 +1,4 @@
-create database if not exists universo_marvel_db;
+﻿create database if not exists universo_marvel_db;
 
 use universo_marvel_db;
 
@@ -14,4 +14,4 @@ create table superheroes_tb(
     logo varchar(400)
 );
 
-insert into superheroes_tb (nombre, grupo, ciudad_operacion, condicion, superpoder, vehiculo, tipo_vehiculo,logo) values ('Dr Strange', 'Súper Héroes', 'Cali', 'Libertad', 'Poderes Mágicos', 1, 'Automovil', 'logo.png'  );
+insert into superheroes_tb (nombre, grupo, ciudad_operacion, condicion, superpoder, vehiculo, tipo_vehiculo,logo) values ('Dr Strange', 'Súper Héroes', 'Cali', 'Libertad', 'Poderes Mágicos', 1, 'Automovil', 'https://w7.pngwing.com/pngs/481/196/png-transparent-basketball-ball-logo-doctor-strange-sanctum-sanctorum-clea-dormammu-hulk-dr-strange-logo-angle-logo-symmetry.png'  );

@@ -1,0 +1,41 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar{
+  background-color: var(--secundary-color);
+  color: var(--tertiary-color);
+
+}
+
+.o-box-logo-marvel{
+  width: 14vh;
+  height: 7vh;
+  margin-left: 2vh;
+}
+
+
+ a:hover,
+ mat-icon:hover{
+  color: var(--primary-color) !important;
+}
+ 
+@media (min-width: 1280px) and (max-width: 1400px){
+  .o-box-logo-marvel {
+    width: 20vh;
+    height: 10vh;
+  }
+}
+
+//Celulares
+@media (max-width: 1024px){
+  .o-movil{
+    display: none;
+  }
+
+  .o-box-logo-marvel {
+    width: 12vh;
+    height: 5vh;
+    margin-left: 8vh;
+  }
+}

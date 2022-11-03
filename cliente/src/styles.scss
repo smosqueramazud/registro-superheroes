@@ -2,3 +2,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+//colores globales de la aplicacion
+:root {
+    --primary-color: #e62429;
+    --secundary-color: #202020;
+    --tertiary-color: #ffff;
+    --hover-button-color: #B52429;
+    --hover-white-color: #f5f5f5;
+}

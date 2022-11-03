@@ -1,0 +1,38 @@
+<ngx-spinner></ngx-spinner>
+<div class="o-box-button">
+    <button mat-raised-button routerLink="/inicio" class="button-back o-button-hover" *ngIf="!movil">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+        <span>Regresar</span>
+      </button>
+
+      <button mat-fab color="warn" aria-label="Example icon button with a home icon" *ngIf="movil" routerLink="/vista-cards" class="button-back-movil">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+</div>
+<div class="o-box-table">
+
+    <div class="o-title">
+        <h1>Formulario para modificar un Superhéroe</h1>
+    </div>
+
+    <div class="o-box-form--grid">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="superheroe.nombre">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Ciudad</mat-label>
+            <input matInput [(ngModel)]="superheroe.ciudad_operacion">
+        </mat-form-field>
+    </div>
+    <div class="o-box-button-add">
+        <button mat-raised-button (click)="modificarSuperheroe()" class="button-add o-button-hover">
+            <mat-icon>create</mat-icon>
+            <span>Modificar</span>
+          </button>
+    </div>   
+
+
+
+</div>

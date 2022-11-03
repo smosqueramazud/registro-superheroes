@@ -34,10 +34,25 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { AgregarComponent } from './components/agregar/agregar.component';
+import { ModificarComponent } from './components/modificar/modificar.component';
+import { ConexionApiService } from './services/conexion-api.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { VistaCardsComponent } from './vista-cards/vista-cards.component';
+import { HeaderAppComponent } from './components/header-app/header-app.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InicioComponent,
+    AgregarComponent,
+    ModificarComponent,
+    VistaCardsComponent,
+    HeaderAppComponent
   ],
   imports: [
     BrowserModule,
@@ -75,8 +90,17 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule, 
+    HttpClientModule,
+    FormsModule,
+    //Loading
+    NgxSpinnerModule,
+
   ],
-  providers: [],
+  providers: [
+    ConexionApiService,
+    HeaderAppComponent,
+    VistaCardsComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
